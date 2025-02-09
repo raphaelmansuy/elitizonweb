@@ -1,11 +1,12 @@
 [build]
-  command = "yarn build"
+  command = "yarn install && yarn build"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"
-  YARN_VERSION = "1.22.4"
+  YARN_VERSION = "4.1.1"
   CI = "true"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
